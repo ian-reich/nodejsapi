@@ -1,0 +1,24 @@
+{
+  "name": "nodejsapi",
+  "version": "1.0.0",
+  "description": "Latihan Node JS API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ian-reich/nodejsapi.git"
+  },
+  "keywords": [
+    "nodejs",
+    "rest",
+    "api"
+  ],
+  "author": "IanWK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ian-reich/nodejsapi/issues"
+  },
+  "homepage": "https://github.com/ian-reich/nodejsapi#readme"
+}
