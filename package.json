@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/ian-reich/nodejsapi/issues"
   },
-  "homepage": "https://github.com/ian-reich/nodejsapi#readme"
+  "homepage": "https://github.com/ian-reich/nodejsapi#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1"
+  }
 }
