@@ -28,3 +28,20 @@ exports.getByID = function(req,res){
         }
     );
 };
+// Manambahkan Data 
+exports.saveData = function(req,res){
+    var judul = req.body.judul;
+    var slug = judul.toLowerCase().replace(" ","-");
+    var penulis = req.body.penulis;
+    var penerbit = req.body.penerbit;
+    connection.query("INSERT INTO tm_komik(judul,slug,penulis,penerbit) VALUES(?,?,?,?)",
+    [judul,slug,penulis,penerbit],
+    function(error, rows,field){
+        if (error) {
+            console.log(error)
+        } else {
+            response.ok("Data Berhasil Disimpan", res);
+        }
+    });
+};
+

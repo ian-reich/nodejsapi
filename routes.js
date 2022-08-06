@@ -13,4 +13,8 @@ module.exports = function (app) {
     // Get BY ID 
     app.route('/getbyid/:id_komik')
         .get(jsonku.getByID)
+
+    // Save Data
+    app.route('/savedata')
+        .post(jsonku.saveData);
 };
