@@ -45,3 +45,20 @@ exports.saveData = function(req,res){
     });
 };
 
+// Update Data By ID
+exports.updateData = function(req, res){
+    var id_komik = req.body.id_komik;
+    var judul = req.body.judul;
+    var slug = judul.toLowerCase().replace(" ","-");
+    var penulis = req.body.penulis;
+    var penerbit = req.body.penerbit;
+    connection.query("UPDATE tm_komik SET judul=?, slug=?, penulis=?, penerbit=? WHERE id_komik=?",[judul, slug, penulis, penerbit, id_komik], 
+    function(error, rows, fields){
+        if (error) {
+            console.log(error)
+        } else {
+            response.ok("Data Berhasil Dirubah", res);
+        }
+    });
+};
+

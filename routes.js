@@ -17,4 +17,8 @@ module.exports = function (app) {
     // Save Data
     app.route('/savedata')
         .post(jsonku.saveData);
+    
+    // Rubah Data 
+    app.route('/updatedata')
+        .put(jsonku.updateData);
 };
