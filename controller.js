@@ -15,3 +15,16 @@ exports.getAllData = function(req,res){
         }
     });
 };
+// GetByID Data
+exports.getByID = function(req,res){
+    let id_komik = req.params.id_komik;
+    connection.query("SELECT * FROM tm_komik WHERE id_komik = ?", [id_komik],
+        function(error, rows, fields){
+            if (error) {
+                console.log(error)
+            } else {
+                response.ok(rows, res)
+            }
+        }
+    );
+};

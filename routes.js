@@ -9,4 +9,8 @@ module.exports = function (app) {
     // Get All Data 
     app.route('/getalldata')
         .get(jsonku.getAllData);
+    
+    // Get BY ID 
+    app.route('/getbyid/:id_komik')
+        .get(jsonku.getByID)
 };
