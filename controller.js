@@ -62,3 +62,16 @@ exports.updateData = function(req, res){
     });
 };
 
+// Delete Data 
+exports.deleteData = function(req, res){
+    var id_komik = req.body.id_komik;
+    connection.query("DELETE FROM tm_komik WHERE id_komik=?", [id_komik], 
+    function(error, rows, fields){
+        if (error) {
+            console.log(error)
+        } else {
+            response.ok("Data Berhasil Dihapus", res);
+        }
+    });
+};
+
