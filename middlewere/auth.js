@@ -17,10 +17,10 @@ exports.register = function(req, res){
     }
 
     // Query Cek EMail 
-    var queryCekEmail = "SELECT * FROM ?? WHERE ??";
+    var queryCekEmail = "SELECT * FROM ?? WHERE ??=?";
     var table = ["user", "email", post.email];
     exeQueryCekEmail = mysql.format(queryCekEmail, table);
-    connection.query(exeQueryCekEmail, function(error, rows, fields){
+    connection.query(exeQueryCekEmail, function(error, rows){
         if (error) {
             console.log(error)
         } else {
