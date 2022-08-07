@@ -5,10 +5,10 @@ module.exports = function (app) {
     // Index URL Path 
     app.route('/')
         .get(jsonku.index);
-        // Get All Data 
+    // Get All Data 
     app.route('/getalldata')
         .get(jsonku.getAllData);
-        // Get BY ID 
+    // Get BY ID 
     app.route('/getbyid/:id_komik')
         .get(jsonku.getByID)
     // Save Data
@@ -20,4 +20,7 @@ module.exports = function (app) {
     // Hapus Data 
     app.route('/deletedata')
         .delete(jsonku.deleteData);
+    // Tampil Group Faktur
+    app.route('/tampilfaktur')
+        .get(jsonku.tampilNoFaktur);
 };

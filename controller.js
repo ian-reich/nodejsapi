@@ -74,4 +74,13 @@ exports.deleteData = function(req, res){
         }
     });
 };
-
+// Menampilkan Group No faktur 
+exports.tampilNoFaktur = function(req,res){
+    connection.query("SELECT d_jual_nofak, d_jual_barang_nama FROM tbl_detail_jual", function(error, rows, fields){
+        if (error) {
+            console.log(error)
+        } else {
+            response.oknested(rows, res);
+        }
+    });
+};
